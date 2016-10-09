@@ -1,1 +1,37 @@
-left
+<div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                
+                <li>
+        <a href="#" id="menu-toggle" ng-click="toggleMenu()"></a>
+                                
+                    
+                </li>
+                <li>
+                    <a href="#">Dashboard</a> 
+                </li>
+                <li>
+                    <a href="#">Shortcuts</a>
+                </li>
+                <li>
+                    <a href="#">Overview</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+            <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+        </div>

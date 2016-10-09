@@ -12,6 +12,8 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/simple-sidebar.css">
+
     <!-- endbuild -->
   </head>
   <body ng-app="chirpApp">
@@ -21,14 +23,7 @@
 
     <!-- Add your site or application content here -->
     <div >
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ui-sref="home">Home</a></li>
-          <li><a ui-sref="about">About</a></li>
-          <li><a ui-sref="contact">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">FuckEd</h3>
-      </div>
+
       <div ui-view></div>
 
 
@@ -75,7 +70,10 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/home/home.js"></script>
+        <script src="scripts/controllers/home/home.js"></script>
+        <script src="scripts/controllers/home/home.left.ctrl.js"></script>
+        <script src="scripts/controllers/home/home.top.ctrl.js"></script>
+        <script src="scripts/controllers/home/home.right.ctrl.js"></script>
         
         <!-- endbuild -->
 </body>
