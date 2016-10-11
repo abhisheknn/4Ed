@@ -3,8 +3,8 @@
 
 
 angular.module('home',[]);
-angular.module('enlightenmentor',['home','ui.router']);
-
+angular.module('shared',[]);
+angular.module('enlightenmentor',['home','ui.router','shared']);
 angular.module('enlightenmentor').config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
 
 
