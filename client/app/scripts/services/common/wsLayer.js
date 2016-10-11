@@ -15,16 +15,18 @@ function wsLayer($http,$q){
         put:put,
         post:post,
         delete:deleteRes,
-        // getGetConfig:getGetConfig,
-        // setGetConfig:setGetConfig,
-        // getPutConfig:getPutConfig,
-        // setPutConfig:setPutConfig,
-        // getPostConfig:getPostConfig,
-        // setPostConfig:setPostConfig,
-        // getDelConfig:getDelConfig,
-        // setDelConfig:setDelConfig,
-        formUrl:formUrl
+         getGetConfig:getGetConfig,
+         setGetConfig:setGetConfig
+        //  getPutConfig:getPutConfig,
+        //  setPutConfig:setPutConfig,
+        //  getPostConfig:getPostConfig,
+        //  setPostConfig:setPostConfig,
+        //  getDelConfig:getDelConfig,
+        //  setDelConfig:setDelConfig,
+
     };
+
+
 
 
 
@@ -60,7 +62,16 @@ function wsLayer($http,$q){
             return deferred;
 
      }
-   
+
+     function getGetConfig(){
+       
+     }
+
+      function setGetConfig(config){
+       
+     }
+
+
        function put(){
 
      }
@@ -68,7 +79,7 @@ function wsLayer($http,$q){
        function post (){
 
      }
-   
+     
        function deleteRes(){
 
      }

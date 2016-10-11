@@ -4,7 +4,10 @@ homeRightCtrl.inject=['$scope']
 
 function homeRightCtrl($scope){
     
-    $scope.toggleMenu=function(){
-        
-    }
+     $scope.openNav=function() {
+    document.getElementById("mySidenav").style.width = "250px";
+    
+}
+
+
 }

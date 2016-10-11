@@ -19,7 +19,7 @@ function homeService(){
          if(service.homeType)
          return service.homeType;
          else 
-            return 'news';
+            return 'feed';
      }
      
 
