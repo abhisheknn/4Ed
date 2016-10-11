@@ -1,17 +1,11 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name chirpApp
- * @description
- * # chirpApp
- *
- * Main module of the application.
- */
-angular
-  .module('chirpApp',['home','ui.router']);
 
-angular.module('chirpApp').config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
+
+angular.module('home',[]);
+angular.module('fucked',['home','ui.router']);
+
+angular.module('fucked').config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
 
 
 $urlRouterProvider.otherwise('/home/college');

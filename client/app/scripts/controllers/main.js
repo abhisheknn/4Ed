@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the chirpApp
  */
-angular.module('chirpApp')
+angular.module('fucked')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

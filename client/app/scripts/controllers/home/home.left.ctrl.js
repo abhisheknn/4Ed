@@ -1,8 +1,6 @@
-angular.module('home',[]);
-
 angular.module('home').controller('homeLeftCtrl',homeLeftCtrl);
 
-homeLeftCtrl.inject=['$scope']
+homeLeftCtrl.inject=['$scope'];
 
 function homeLeftCtrl($scope){
     

@@ -1,5 +1,3 @@
-angular.module('home',[]);
-
 angular.module('home').controller('homeRightCtrl',homeRightCtrl);
 
 homeRightCtrl.inject=['$scope']
