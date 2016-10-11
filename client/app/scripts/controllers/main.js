@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name chirpApp.controller:MainCtrl
+ * @name enlightenmentor.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the chirpApp
+ * Controller of the enlightenmentor
  */
-angular.module('fucked')
+angular.module('enlightenmentor')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

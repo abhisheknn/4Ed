@@ -3,9 +3,9 @@
 
 
 angular.module('home',[]);
-angular.module('fucked',['home','ui.router']);
+angular.module('enlightenmentor',['home','ui.router']);
 
-angular.module('fucked').config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
+angular.module('enlightenmentor').config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
 
 
 $urlRouterProvider.otherwise('/home/college');
