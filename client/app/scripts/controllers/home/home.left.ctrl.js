@@ -8,10 +8,6 @@ function homeLeftCtrl($scope){
     $scope.toggleMenu=function(){
         
     }
-
-
-
-
  $scope.closeNav=function() {
     document.getElementById("mySidenav").style.width = "0";
    

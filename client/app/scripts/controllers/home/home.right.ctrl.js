@@ -9,5 +9,18 @@ function homeRightCtrl($scope){
     
 }
 
+$scope.feeds=[];
+
+for(var i=0;i<10;i++)
+$scope.feeds.push({desc:"desx",currentTab:"tab1",
+link:"http://localhost:9000/#/home/college"});
+
+$scope.tab1="About";
+$scope.tab2="Professors";
+$scope.tab3="Students";
+
+$scope.toggle=function(feed,tab){
+feed.currentTab=tab;
+}
 
 }
