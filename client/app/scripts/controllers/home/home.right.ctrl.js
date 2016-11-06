@@ -1,8 +1,8 @@
 angular.module('home').controller('homeRightCtrl',homeRightCtrl);
 
-homeRightCtrl.inject=['$scope','homeRightService'];
+homeRightCtrl.inject=['$scope','homeRightService','homeService'];
 
-function homeRightCtrl($scope,homeRightService){
+function homeRightCtrl($scope,homeRightService,homeService){
     
      $scope.openNav=function() {
     document.getElementById("mySidenav").style.width = "250px";
@@ -11,11 +11,16 @@ function homeRightCtrl($scope,homeRightService){
 
 $scope.viewType="summary";
 
+$scope.$on('viewTypeChanged',function(event,data){
+        if(homeService.getViewType()=="summary"){
+            $scope.viewType="list";        
+        }else{
+            $scope.viewType="summary";
+            }
+    
+});
 $scope.feeds=[];
 
-// for(var i=0;i<10;i++)
-// $scope.feeds.push({desc:"desx",currentTab:"tab1",
-// link:"http://localhost:9000/#/home/college"});
 homeRightService.getFeeds().then(function(response){
 $scope.feeds=response.data;
 for(var i=0;i<$scope.feeds.length;i++){

@@ -1,6 +1,6 @@
   <!--<span style="font-size:30px;cursor:pointer;margin-top: 30px; position: fixed;" ng-click="openNav()">&#9776;</span>-->
 
-<div ng-if="viewType=='detailed'">
+<div ng-if="viewType=='list'">
 <div style="margin-left: 300px; margin-top:50px">
 <div ng-repeat="feed in feeds" class="card text-xs-center"  style="width:600px">
   <div class="card-header">
@@ -35,9 +35,11 @@
   <div class="card-block">
     <p class="card-title">{{feed.collegeId}}</p>
     <p style=" font-size: 10px;">{{feed.desc}}</p>
-    <p>{{feed.rating}}</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <div style="margin-bottom: 0px;"><img  src="images/star_{{feed.rating}}.png"></div>
+    <small class="text-muted">Last updated 3 mins ago</small>
   </div>
-</div></div>
+</div>
+<div>&nbsp;</div>
+</div>
  </div>
  </div>
