@@ -1,9 +1,8 @@
   <!--<span style="font-size:30px;cursor:pointer;margin-top: 30px; position: fixed;" ng-click="openNav()">&#9776;</span>-->
 
-
-
+<div ng-if="viewType=='detailed'">
 <div style="margin-left: 300px; margin-top:50px">
-<div ng-repeat="feed in feeds" class="card text-xs-center" style="width:600px">
+<div ng-repeat="feed in feeds" class="card text-xs-center"  style="width:600px">
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs pull-xs-left">
       <li class="nav-item">
@@ -14,13 +13,31 @@
       </li>
       <li class="nav-item">
         <a class="nav-link "  ng-class="{active:feed.currentTab=='tab3'}" ng-click="toggle(feed,'tab3')" href="#">{{tab3}}</a>
-      </li>
+      </li> 
     </ul>
   </div>
   <div class="card-block">
-    <h4 class="card-title">Special title treatment</h4>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <div ng-if="feed.currentTab=='tab1'">{{feed.rating}}{{feed.desc}}</div>
+    <div ng-if="feed.currentTab=='tab2'">{{professors}}</div>
+    <div ng-if="feed.currentTab=='tab3'">{{students}}</div>
     
   </div>
 </div>
- </div>         
+
+</div>
+ </div>
+ 
+ <div ng-if="viewType=='summary'">         
+ <div style="margin-left: 300px; margin-top:50px;display: block;">
+   <div ng-repeat="feed in feeds" style="float: left;">
+ <div class="card em-card-size" >
+  <img class="card-img-top" style="width:200px" src="http://www.centoxduecento.com/wp-content/uploads/2016/08/logo-300x120.jpg" alt="Card image cap">
+  <div class="card-block">
+    <p class="card-title">{{feed.collegeId}}</p>
+    <p style=" font-size: 10px;">{{feed.desc}}</p>
+    <p>{{feed.rating}}</p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div></div>
+ </div>
+ </div>

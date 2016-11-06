@@ -31,12 +31,13 @@ function wsLayer($http,$q){
 
 
     function formUrl(url,matrixParams,queryParams){
-
+      if(matrixParams)
       if(matrixParams.length>0){
             for(var i=0;i<matrixParams.length;i++){
               url=url+';'+matrixParams[0].key+'='+matrixParams[0].value;
             }
-      }
+      }   
+        if(queryParams)
             if(queryParams.length>0){
               url=url+'?';
             for(var j=0;j<queryParams.length;j++){
@@ -59,12 +60,16 @@ function wsLayer($http,$q){
             },function error(response){
               deferred.reject(response);
             });
-            return deferred;
+            
+            return deferred.promise;
 
      }
 
      function getGetConfig(){
        
+       return {
+         timeout:2000
+          }
      }
 
       function setGetConfig(config){

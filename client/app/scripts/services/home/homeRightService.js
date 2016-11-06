@@ -1,12 +1,19 @@
-angular.module('home').controller('homeRightService',homeRightService);
+angular.module('home').service('homeRightService',homeRightService);
 
 
-homeRightService.inject=[];
+homeRightService.inject=['wslayer','$q'];
 
-function homeRightService(){
-    
-    return {
-        
-    }
+function homeRightService(wslayer,$q){
 
+    this.getFeeds=function(){
+        var deferred = $q.defer(); 
+           
+        wslayer.get("http://localhost:8080/ConnectEd/rest/college/getAllCollegesAboutInfo").then(function(response){
+           deferred.resolve(response); 
+           
+        });
+        return deferred.promise;
+}    
+
+return this;
 }
